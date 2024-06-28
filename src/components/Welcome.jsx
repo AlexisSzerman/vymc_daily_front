@@ -13,7 +13,7 @@ const Welcome = () => {
 
   const fetchReunionesSemana = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/reuniones-semana-actual');
+      const response = await axios.get('https://vymc-daily-backend.onrender.com/reuniones-semana-actual');
       const reuniones = response.data;
 
       // Ajustar las fechas para manejar correctamente la zona horaria

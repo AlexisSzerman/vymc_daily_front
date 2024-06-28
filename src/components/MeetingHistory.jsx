@@ -23,7 +23,7 @@ const MeetingHistory = () => {
 
   const fetchReuniones = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/reuniones');
+      const response = await axios.get('https://vymc-daily-backend.onrender.com/reuniones');
       const reunionesFormateadas = response.data.map(reunion => ({
         ...reunion,
         Fecha: formatFecha(reunion.Fecha) // Formatear la fecha aquí
