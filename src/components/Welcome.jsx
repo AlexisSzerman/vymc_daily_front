@@ -39,7 +39,7 @@ const Welcome = () => {
     return (
       <div className="text-center mt-4">
         <div className="spinner"></div>
-        <p></p>
+        <p>Cargando... Puede tomar unos segundos</p>
       </div>
     );
   }
