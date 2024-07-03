@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../App.css';
+import ProgressBar from './ProgressBar'; // Asegúrate de que la ruta sea correcta
 
 const Welcome = () => {
   const [reunionesSemana, setReunionesSemana] = useState([]);
@@ -38,7 +39,7 @@ const Welcome = () => {
   if (loading) {
     return (
       <div className="text-center mt-4">
-        <div className="spinner"></div>
+        <ProgressBar loading={loading} />
         <p>Cargando... Puede tomar unos segundos</p>
       </div>
     );
@@ -74,4 +75,5 @@ const Welcome = () => {
 };
 
 export default Welcome;
+
 

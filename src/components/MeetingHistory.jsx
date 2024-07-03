@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { format } from 'date-fns'; // Importar función necesaria de date-fns
+import ProgressBar from './ProgressBar';
 
 const MeetingHistory = () => {
   const [reuniones, setReuniones] = useState([]);
@@ -86,13 +86,13 @@ const MeetingHistory = () => {
     });
   };
 
+
   if (loading) {
     return (
-      <div className="container mx-auto mb-4">
-        <div className="text-center mt-4">
-          <div className="spinner"></div>
-          <p></p>
-        </div>
+      <div className="text-center mt-4">
+{/*         <div className="spinner"></div> */}
+          <ProgressBar loading={loading} />
+          <p>Cargando... Puede tomar unos segundos</p>
       </div>
     );
   }
